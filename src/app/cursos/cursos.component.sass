@@ -1,0 +1,190 @@
+*
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap')
+    font-family: 'Open Sans', sans-serif
+
+
+form
+    width: 80%
+    margin: 30px auto
+    border: solid 1px #ccc
+    background-color: #e8e8e8
+    border-radius: 5px
+    padding: 5px
+    display: flex
+
+input[type="text"]
+    padding: 5px
+    margin-right: 1rem
+    border: solid 1px #ccc
+    border-radius: 5px
+    width: 25%
+input[type="number"]
+    padding: 5px
+    margin-right: 1rem
+    border: solid 1px #ccc
+    border-radius: 5px
+    width: 25%
+
+input[type=button]
+    background-color: #09aa03
+    border-radius: 5px
+    border: none
+    padding: 5px
+    color: #fff
+    width: 25%
+    cursor: pointer
+    transition: .4s
+
+    &:hover
+        background-color: #09d602
+
+div.adicionador
+    width: 80%
+    margin: 0 auto
+    text-align: center
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    button
+        text-align: start
+        padding: 1rem 0
+        margin: 1rem 0
+        width: 170px
+        background-color: #09aa03
+        border-radius: 5px
+        border: none
+        color: #fff
+        cursor: pointer
+        transition: .4s
+        display: flex
+        justify-content: center
+        align-items: center
+
+        &:hover
+            background-color: #09d602
+
+        img
+            width: 30px
+
+    h1
+        margin: 3rem 0
+
+.caixa-itens
+    margin: 5rem auto
+    width: 80%
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+    &-change
+        margin: 2rem 1rem 0 0
+        border-radius: 10px
+        box-shadow: 1px 0px 49px 6px rgba(0,0,0,0.10)
+
+
+        h1
+            padding: .1rem 1rem  
+
+        h3
+            padding: 3rem 1rem 1rem 1rem
+        
+        p
+            color: #6b6b6b
+            padding: 0 1rem  
+
+        &-image
+            border-radius: 4px 4px 0 0
+            width: 100%
+            min-width: 300px
+            height: 200px
+            object-fit: cover
+        &-acoes
+            width: 100%
+            padding: 1rem 
+            display: flex
+            justify-content: flex-end
+            .acoes
+                margin: 0 1rem
+                width: 35px
+                cursor: pointer
+
+form.pop-menu
+    background-color: #e8e8e8b2
+    width: 100%
+    height: 100%
+    position: fixed
+    display: none
+    top: 0
+    flex-direction: column
+    align-items: center
+    padding: 0
+    margin: 0
+    opacity: 0
+    
+    input
+        padding: 1rem
+        margin: 1rem 0
+        width: 300px
+
+    div
+        width: 100%
+        height: 100px
+        display: flex
+        justify-content: flex-end
+        img
+            width: 40px
+            height: 40px
+            margin: 3rem 5rem
+            cursor: pointer
+
+form.pop-menu-c
+    background-color: #e8e8e8b2
+    width: 100%
+    height: 100%
+    position: fixed
+    display: none
+    top: 0
+    flex-direction: column
+    align-items: center
+    padding: 0
+    margin: 0
+    opacity: 0
+    
+    input
+        padding: 1rem
+        margin: 1rem 0
+        width: 300px
+
+    div
+        width: 100%
+        height: 100px
+        display: flex
+        justify-content: flex-end
+        img
+            width: 40px
+            height: 40px
+            margin: 3rem 5rem
+            cursor: pointer
+    
+
+form.pop-menu.active
+    display: flex
+    opacity: 1
+    transition: .4s
+    
+    
+    input
+        padding: 1rem
+        margin: 1rem 0
+
+form.pop-menu-c.active
+    display: flex
+    opacity: 1
+    transition: .4s
+
+
+input
+    padding: 1rem
+    margin: 1rem 0
+

@@ -1,0 +1,38 @@
+<form class="pop-menu-c">
+    <div>
+        <img (click)="fecharPopMenuC()" src="../../assets/imgs/fechar.svg" alt="">
+    </div>
+    <input class="form-1" placeholder="Link da imagem" type="text" [(ngModel)]="produto.imgProduto" name="imgProduto">
+    <input class="form-1" placeholder="Item" type="text" [(ngModel)]="produto.nomeProduto" name="nomeProduto">
+    <input class="form-1" placeholder="Valor" type="number" [(ngModel)]="produto.valorProduto" name="valorProduto">
+    <input class="form-1" placeholder="Tipo" type="text" [(ngModel)]="produto.tipoProduto" name="tipoProduto">
+    <input type="button" value="Cadastrar" (click)="cadastrar(produto.imgProduto,produto.nomeProduto,produto.valorProduto,produto.tipoProduto)">
+</form>
+
+<form class="pop-menu">
+    <div>
+        <img (click)="fecharPopMenu()" src="../../assets/imgs/fechar.svg" alt="">
+    </div>
+    <input class="form-1" placeholder="Link da imagem" type="text" [(ngModel)]="produto.imgProduto" name="imgProduto">
+    <input class="form-1" placeholder="Item" type="text" [(ngModel)]="produto.nomeProduto" name="nomeProduto">
+    <input class="form-1" placeholder="Valor" type="number" [(ngModel)]="produto.valorProduto" name="valorProduto">
+    <input class="form-1" placeholder="Tipo" type="text" [(ngModel)]="produto.tipoProduto" name="tipoProduto">
+    <input type="button" value="Editar" (click)="atualizarProduto(produto.imgProduto,produto.nomeProduto,produto.valorProduto,produto.tipoProduto)">
+</form>
+<div class="adicionador">
+    <button (click)="fecharPopMenuC()">Adicionar item <img src="../../assets/imgs/plus.svg" alt=""></button>
+    <h1>Itens registrados:</h1>
+</div>
+
+<div class="caixa-itens">
+    <div class="caixa-itens-change" *ngFor="let produto of vetorProduto; let id = index">
+        <img class="caixa-itens-change-image" src={{produto.imgProduto}} alt="">
+        <h1>{{produto.nomeProduto}}</h1>
+        <p>{{produto.tipoProduto}}</p>
+        <h3>R$ {{produto.valorProduto}}</h3>
+        <div class="caixa-itens-change-acoes">
+            <img class="acoes" (click)="deletarCurso(id)" src="../../assets/imgs/deletar.svg" alt="">
+            <img class="acoes" (click)="editarCurso(id)" src="../../assets/imgs/editar.svg" alt="">
+        </div>
+    </div>
+</div>
